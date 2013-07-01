@@ -14,7 +14,7 @@ module JiraFormatter
         begin
           issue = Issue.new(scenario)
         rescue => e
-          puts "jira reporting failed for #{scenario}\n#{e.message}\n#{e.backtrace}"
+          puts "jira reporting failed for #{scenario}\n#{e.class}#{e.message}\n#{e.backtrace}"
         end
       end
     end

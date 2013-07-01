@@ -32,7 +32,6 @@ module JiraFormatter
         properties[:run_time] = Time.new()
         properties[:tags] = scenario.source_tag_names
         properties[:status] = scenario.status
-        properties[:domain] = determine_domain(scenario)
         if properties[:status] == :failed
           
         end
@@ -43,10 +42,6 @@ module JiraFormatter
           properties.merge build_from_example_row(scenario)
         end
       end
-    end
-
-    def determine_domain(scenario)
-
     end
 
     def build_from_scenario(scenario)
